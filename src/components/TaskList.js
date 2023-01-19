@@ -1,20 +1,18 @@
 import React from "react";
-import { TASKS } from "../data";
 import Task from "./Task";
 
-function TaskList() {
+
+function Task({text,category,deletedItem}) {
+  
   return (
-    <div className="tasks">
-      {tasks.map((task, index)=>(
-        <Task
-        deletedItem={deletedItem}
-        key={index}
-        text={task.text}
-        category={task.category}
-        />
-      ))}
+    <div className="task">
+      <div className="label">{category}</div>
+      <div className="text">{text}</div>
+      <button onClick={()=>deletedItem(text)} className="delete">X</button>
     </div>
   );
 }
 
-export default TaskList;
+export default Task;
+
+

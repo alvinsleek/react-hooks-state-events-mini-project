@@ -1,6 +1,6 @@
 import React from "react";
 
-function CategoryFilter() {
+function CategoryFilter({onButton,selectedButton,categories}) {
   return (
     <div className="categories">
       <h5>Category filters</h5>
